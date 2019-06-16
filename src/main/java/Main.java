@@ -22,8 +22,7 @@ public class Main {
         boardJungle.addComponent(4,7, lightShield);
         boardJungle.addComponent(2,8, tree);
 
-        janek.moveUp(Board.isAvailableField(boardJungle.getComponents(), janek));
-
+        janek.moveUp(boardJungle.isAvailableField(boardJungle.getComponents(), janek));
     }
 
 }

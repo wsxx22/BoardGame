@@ -40,7 +40,7 @@ public class Board extends Component{
         components[widthCoordinateField][lengthwidthCoordinateField] = component;
     }
 
-    public static boolean isAvailableField(Component[][] board, Player player) {
+    public boolean isAvailableField(Component[][] board, Player player) {
 
         if (board[player.getMoveX()][player.getMoveY()] == null) {
             return true;
