@@ -1,9 +1,8 @@
-package player;
+package game.player;
 
-import board.Board;
-import board.Component;
-import item.Item;
-import utils.Type;
+import game.board.Component;
+import game.item.Item;
+import game.utils.Type;
 
 import java.util.ArrayList;
 import java.util.List;

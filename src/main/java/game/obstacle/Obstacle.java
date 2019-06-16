@@ -1,6 +1,6 @@
-package obstacle;
+package game.obstacle;
 
-import board.Component;
+import game.board.Component;
 
 public abstract class Obstacle extends Component {
 

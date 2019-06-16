@@ -1,4 +1,4 @@
-package player;
+package game.player;
 
 public interface ActionPlayer {
 

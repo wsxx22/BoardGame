@@ -1,7 +1,7 @@
-package item;
+package game.item;
 
 
-import utils.Type;
+import game.utils.Type;
 
 public class Sword extends Item {
 
