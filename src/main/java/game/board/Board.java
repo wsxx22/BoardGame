@@ -1,5 +1,8 @@
 package game.board;
 
+import game.item.Item;
+import game.player.Player;
+
 public class Board extends Component{
 
     private String name;
@@ -37,6 +40,16 @@ public class Board extends Component{
         components[widthCoordinateField][lengthwidthCoordinateField] = component;
     }
 
+    public static boolean isAvailableField(Component[][] board, Player player) {
 
+        if (board[player.getMoveX()][player.getMoveY()] == null) {
+            return true;
+        } else if (board[player.getMoveX()][player.getMoveY()].equals(Item.class)) {
+            player.addItem((Item) board[player.getMoveX()][player.getMoveY()]);
+            return true;
+        }  else {
+            return false;
+        }
+    }
 
 }

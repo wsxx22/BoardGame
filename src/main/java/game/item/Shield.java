@@ -1,13 +1,11 @@
 package game.item;
 
-import game.utils.Type;
-
 public class Shield extends Item {
 
-    public Shield(String name, Type type, int defensivePoints) {
-        super(name, type);
+    private int defensivePoints;
+
+    public Shield(String name, int defensivePoints) {
+        super(name);
         this.defensivePoints = defensivePoints;
     }
-
-    private int defensivePoints;
 }

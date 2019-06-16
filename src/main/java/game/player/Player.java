@@ -2,7 +2,6 @@ package game.player;
 
 import game.board.Component;
 import game.item.Item;
-import game.utils.Type;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,55 +10,38 @@ public class Player extends Component implements ActionPlayer{
 
     private String username;
 
-    private Type typePlayer;
+    private int moveX = 0;
 
-    private int moveBoardWidth = 0;
-
-    private int moveBoardLength = 0;
-
-    private Component[][] board;
+    private int moveY = 0;
 
     private List<Item> items = new ArrayList<Item>();
 
-    public Player(String username, Type typePlayer) {
+    public Player(String username) {
         this.username = username;
-        this.typePlayer = typePlayer;
     }
 
     public String getUsername() {
         return username;
     }
 
-    public Type getTypePlayer() {
-        return typePlayer;
-    }
-
     public List<Item> getItems() {
         return items;
     }
 
-    public int getMoveBoardWidth() {
-        return moveBoardWidth;
+    public int getMoveX() {
+        return moveX;
     }
 
-    public void setMoveBoardWidth(int moveBoardWidth) {
-        this.moveBoardWidth = moveBoardWidth;
+    public void setMoveX(int moveX) {
+        this.moveX = moveX;
     }
 
-    public int getMoveBoardLength() {
-        return moveBoardLength;
+    public int getMoveY() {
+        return moveY;
     }
 
-    public void setMoveBoardLength(int moveBoardLength) {
-        this.moveBoardLength = moveBoardLength;
-    }
-
-    public Component[][] getBoard() {
-        return board;
-    }
-
-    public void setBoard(Component[][] board) {
-        this.board = board;
+    public void setMoveY(int moveY) {
+        this.moveY = moveY;
     }
 
     public void addItem(Item item) {
@@ -67,19 +49,19 @@ public class Player extends Component implements ActionPlayer{
     }
 
     public void moveUp(boolean isAvailable) {
-        moveBoardLength++;
+        moveY++;
     }
 
     public void moveDown(boolean isAvailable) {
-        moveBoardLength--;
+        moveY--;
     }
 
     public void moveRight(boolean isAvailable) {
-        moveBoardWidth++;
+        moveX++;
     }
 
     public void moveLeft(boolean isAvailable) {
-        moveBoardWidth--;
+        moveX--;
     }
 
 }

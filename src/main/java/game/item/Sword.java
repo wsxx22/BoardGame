@@ -1,15 +1,12 @@
 package game.item;
 
-
-import game.utils.Type;
-
 public class Sword extends Item {
 
-    public Sword(String name, Type type, int attackPoints) {
-        super(name, type);
+    private int attackPoints;
+
+    public Sword(String name, int attackPoints) {
+        super(name);
         this.attackPoints = attackPoints;
     }
-
-    private int attackPoints;
 
 }
