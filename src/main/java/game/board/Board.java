@@ -1,8 +1,5 @@
 package game.board;
 
-import game.item.Item;
-import game.player.Player;
-
 public class Board extends Component{
 
     private String name;
@@ -36,21 +33,8 @@ public class Board extends Component{
         return components;
     }
 
-    public void addComponent (int widthCoordinateField, int lengthwidthCoordinateField, Component component) {
-        components[widthCoordinateField][lengthwidthCoordinateField] = component;
-    }
-
-    public boolean isAvailableField(Player player) {
-        Component[][] components = player.getBoard().getComponents();
-
-        if (components[player.getMoveX()][player.getMoveY()] == null) {
-            return true;
-        } else if (components[player.getMoveX()][player.getMoveY()].equals(Item.class)) {
-            player.addItem((Item) components[player.getMoveX()][player.getMoveY()]);
-            return true;
-        }  else {
-            return false;
-        }
+    public void addComponent (int widthCoordinateField, int lengthCoordinateField, Component component) {
+        components[widthCoordinateField][lengthCoordinateField] = component;
     }
 
 }

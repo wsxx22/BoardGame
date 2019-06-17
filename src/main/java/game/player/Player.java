@@ -55,28 +55,39 @@ public class Player extends Component implements ActionPlayer{
         this.board = board;
     }
 
-    public void addItem(Item item) {
+    private void addItem(Item item) {
         items.add(item);
     }
 
     public void moveUp() {
-        if (board.isAvailableField(this))
+        if (isPossibilityMove(moveX, moveY))
             moveY++;
     }
 
     public void moveDown() {
-        if (board.isAvailableField(this))
+        if (isPossibilityMove(moveX, moveY))
             moveY--;
     }
 
     public void moveRight() {
-        if (board.isAvailableField(this))
+        if (isPossibilityMove(moveX, moveY))
             moveX++;
     }
 
     public void moveLeft() {
-        if (board.isAvailableField(this))
+        if (isPossibilityMove(moveX, moveY))
             moveX--;
     }
 
+    private boolean isPossibilityMove(int moveX, int moveY) {
+        Component[][] components = this.board.getComponents();
+        if (components[moveX][moveY] == null) {
+            return true;
+        }
+        if (components[moveX][moveY].equals(Item.class)) {
+            this.addItem((Item) components[moveX][moveY]);
+            return true;
+        }
+        return false;
+    }
 }
