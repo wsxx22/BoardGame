@@ -2,10 +2,8 @@ package game.player;
 
 import game.board.Board;
 import game.board.Component;
+import game.equipment.Equipment;
 import game.item.Item;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class Player extends Component implements ActionPlayer{
 
@@ -17,7 +15,7 @@ public class Player extends Component implements ActionPlayer{
 
     private Board board;
 
-    private List<Item> items = new ArrayList<Item>();
+    private Equipment equipment;
 
     public Player(String username) {
         this.username = username;
@@ -27,16 +25,16 @@ public class Player extends Component implements ActionPlayer{
         return username;
     }
 
-    public List<Item> getItems() {
-        return items;
+    public Equipment getEquipment() {
+        return equipment;
     }
 
     public void setBoard(Board board) {
         this.board = board;
     }
 
-    private void addItem(Item item) {
-        items.add(item);
+    private void addItemToEquipment(Item item) {
+        equipment.addItem(item);
     }
 
     public void moveUp() {
@@ -65,7 +63,7 @@ public class Player extends Component implements ActionPlayer{
             return true;
         }
         if (components[moveX][moveY].equals(Item.class)) {
-            this.addItem((Item) components[moveX][moveY]);
+            this.addItemToEquipment((Item) components[moveX][moveY]);
             return true;
         }
         return false;
