@@ -17,12 +17,13 @@ public class Main {
 
         Player janek = new Player("janek22");
         Board boardJungle = new Board("jungle", 10, 10);
+        janek.setBoard(boardJungle);
 
         boardJungle.addComponent(2,3, axe);
         boardJungle.addComponent(4,7, lightShield);
         boardJungle.addComponent(2,8, tree);
 
-        janek.moveUp(boardJungle.isAvailableField(boardJungle.getComponents(), janek));
+        janek.moveUp();
     }
 
 }

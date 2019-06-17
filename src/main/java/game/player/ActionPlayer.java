@@ -2,12 +2,12 @@ package game.player;
 
 public interface ActionPlayer {
 
-    void moveUp(boolean isAvailable);
+    void moveUp();
 
-    void moveDown(boolean isAvailable);
+    void moveDown();
 
-    void moveRight(boolean isAvailable);
+    void moveRight();
 
-    void moveLeft(boolean isAvailable);
+    void moveLeft();
 
 }

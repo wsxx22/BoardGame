@@ -40,12 +40,13 @@ public class Board extends Component{
         components[widthCoordinateField][lengthwidthCoordinateField] = component;
     }
 
-    public boolean isAvailableField(Component[][] board, Player player) {
+    public boolean isAvailableField(Player player) {
+        Component[][] components = player.getBoard().getComponents();
 
-        if (board[player.getMoveX()][player.getMoveY()] == null) {
+        if (components[player.getMoveX()][player.getMoveY()] == null) {
             return true;
-        } else if (board[player.getMoveX()][player.getMoveY()].equals(Item.class)) {
-            player.addItem((Item) board[player.getMoveX()][player.getMoveY()]);
+        } else if (components[player.getMoveX()][player.getMoveY()].equals(Item.class)) {
+            player.addItem((Item) components[player.getMoveX()][player.getMoveY()]);
             return true;
         }  else {
             return false;

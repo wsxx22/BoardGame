@@ -1,5 +1,6 @@
 package game.player;
 
+import game.board.Board;
 import game.board.Component;
 import game.item.Item;
 
@@ -13,6 +14,8 @@ public class Player extends Component implements ActionPlayer{
     private int moveX = 0;
 
     private int moveY = 0;
+
+    private Board board;
 
     private List<Item> items = new ArrayList<Item>();
 
@@ -44,24 +47,36 @@ public class Player extends Component implements ActionPlayer{
         this.moveY = moveY;
     }
 
+    public Board getBoard() {
+        return board;
+    }
+
+    public void setBoard(Board board) {
+        this.board = board;
+    }
+
     public void addItem(Item item) {
         items.add(item);
     }
 
-    public void moveUp(boolean isAvailable) {
-        moveY++;
+    public void moveUp() {
+        if (board.isAvailableField(this))
+            moveY++;
     }
 
-    public void moveDown(boolean isAvailable) {
-        moveY--;
+    public void moveDown() {
+        if (board.isAvailableField(this))
+            moveY--;
     }
 
-    public void moveRight(boolean isAvailable) {
-        moveX++;
+    public void moveRight() {
+        if (board.isAvailableField(this))
+            moveX++;
     }
 
-    public void moveLeft(boolean isAvailable) {
-        moveX--;
+    public void moveLeft() {
+        if (board.isAvailableField(this))
+            moveX--;
     }
 
 }
