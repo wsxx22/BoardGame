@@ -1,6 +1,8 @@
 package game.board;
 
-public class Board extends Component{
+import game.utils.Component;
+
+public class Board extends Component {
 
     private String name;
 

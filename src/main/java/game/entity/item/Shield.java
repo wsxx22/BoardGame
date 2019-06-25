@@ -1,4 +1,4 @@
-package game.board.entity.item;
+package game.entity.item;
 
 public class Shield extends Item {
 

@@ -1,10 +1,10 @@
-package game.board.entity.player;
+package game.entity.player;
 
-import game.board.entity.board.Board;
-import game.board.utils.Component;
-import game.board.utils.MovableUnit;
-import game.board.equipment.Equipment;
-import game.board.entity.item.Item;
+import game.board.Board;
+import game.utils.Component;
+import game.utils.MovableUnit;
+import game.equipment.Equipment;
+import game.entity.item.Item;
 
 public class Player extends Component implements MovableUnit {
 

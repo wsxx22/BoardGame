@@ -1,10 +1,10 @@
-import game.board.entity.board.Board;
-import game.board.entity.item.Item;
-import game.board.entity.item.Shield;
-import game.board.entity.item.Sword;
-import game.board.entity.obstacle.Obstacle;
-import game.board.entity.obstacle.Tree;
-import game.board.entity.player.Player;
+import game.board.Board;
+import game.entity.item.Item;
+import game.entity.item.Shield;
+import game.entity.item.Sword;
+import game.entity.obstacle.Obstacle;
+import game.entity.obstacle.Tree;
+import game.entity.player.Player;
 
 public class Main {
 
