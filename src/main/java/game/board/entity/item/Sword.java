@@ -1,4 +1,4 @@
-package game.item;
+package game.board.entity.item;
 
 public class Sword extends Item {
 

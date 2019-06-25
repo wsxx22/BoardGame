@@ -1,6 +1,6 @@
-package game.equipment;
+package game.board.equipment;
 
-import game.item.Item;
+import game.board.entity.item.Item;
 
 import java.util.ArrayList;
 import java.util.List;

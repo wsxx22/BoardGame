@@ -1,6 +1,6 @@
-package game.player;
+package game.board.utils;
 
-public interface ActionPlayer {
+public interface MovableUnit {
 
     void moveUp();
 

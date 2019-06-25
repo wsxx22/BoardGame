@@ -1,11 +1,12 @@
-package game.player;
+package game.board.entity.player;
 
-import game.board.Board;
-import game.board.Component;
-import game.equipment.Equipment;
-import game.item.Item;
+import game.board.entity.board.Board;
+import game.board.utils.Component;
+import game.board.utils.MovableUnit;
+import game.board.equipment.Equipment;
+import game.board.entity.item.Item;
 
-public class Player extends Component implements ActionPlayer{
+public class Player extends Component implements MovableUnit {
 
     private String username;
 

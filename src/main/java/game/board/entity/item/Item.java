@@ -1,6 +1,6 @@
-package game.item;
+package game.board.entity.item;
 
-import game.board.Component;
+import game.board.utils.Component;
 
 public abstract class Item extends Component {
 

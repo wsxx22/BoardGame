@@ -1,4 +1,4 @@
-package game.board;
+package game.board.utils;
 
 public class Component {
 
