@@ -6,9 +6,11 @@ import game.entity.obstacle.Obstacle;
 import game.entity.obstacle.Tree;
 import game.entity.player.Player;
 
+import java.io.IOException;
+
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         Item axe = new Sword("Axe", 10);
         Item lightShield = new Shield("Light Shield", 5);
@@ -23,7 +25,9 @@ public class Main {
         boardJungle.addComponent(4,7, lightShield);
         boardJungle.addComponent(2,8, tree);
 
-        janek.moveUp();
+//        janek.moveUp();
+
+
     }
 
 }

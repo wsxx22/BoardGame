@@ -1,22 +1,21 @@
 package game.entity.player;
 
 import game.board.Board;
-import game.utils.Component;
-import game.utils.MovableUnit;
-import game.equipment.Equipment;
+import game.entity.Damageable;
 import game.entity.item.Item;
+import game.equipment.Equipment;
+import game.utils.Component;
 
-public class Player extends Component implements MovableUnit {
+
+public class Player implements OfflinePlayer, OnlinePlayer, Damageable {
 
     private String username;
-
-    private int moveX = 0;
-
-    private int moveY = 0;
 
     private Board board;
 
     private Equipment equipment;
+
+    private boolean isActive;
 
     public Player(String username) {
         this.username = username;
@@ -38,27 +37,37 @@ public class Player extends Component implements MovableUnit {
         equipment.addItem(item);
     }
 
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public void setActive(boolean active) {
+        isActive = active;
+    }
+
+    @Override
     public void moveUp() {
         if (isPossibilityMove(moveX, moveY))
             moveY++;
     }
-
+    @Override
     public void moveDown() {
         if (isPossibilityMove(moveX, moveY))
             moveY--;
     }
-
+    @Override
     public void moveRight() {
         if (isPossibilityMove(moveX, moveY))
             moveX++;
     }
-
+    @Override
     public void moveLeft() {
         if (isPossibilityMove(moveX, moveY))
             moveX--;
     }
 
-    private boolean isPossibilityMove(int moveX, int moveY) {
+    @Override
+    public boolean isPossibilityMove(int moveX, int moveY) {
         Component[][] components = this.board.getComponents();
         if (components[moveX][moveY] == null) {
             return true;
@@ -68,5 +77,10 @@ public class Player extends Component implements MovableUnit {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public boolean isActivePlayer(boolean isActive) {
+        return isActive();
     }
 }

@@ -1,6 +1,8 @@
 package game.utils;
 
-public interface MovableUnit {
+import game.entity.Entity;
+
+public interface MovableUnit extends Entity {
 
     void moveUp();
 
@@ -9,5 +11,7 @@ public interface MovableUnit {
     void moveRight();
 
     void moveLeft();
+
+    boolean isPossibilityMove(int moveX, int moveY);
 
 }

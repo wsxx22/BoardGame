@@ -1,8 +1,9 @@
 package game.entity.item;
 
+import game.entity.Damageable;
 import game.utils.Component;
 
-public abstract class Item extends Component {
+public abstract class Item extends Component implements Damageable {
 
     public String name;
 
