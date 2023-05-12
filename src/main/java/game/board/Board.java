@@ -1,7 +1,6 @@
 package game.board;
 
 import game.utils.Component;
-import game.utils.Test33;
 
 public class Board extends Component {
 
@@ -18,7 +17,6 @@ public class Board extends Component {
         this.boardWidth = boardWidth;
         this.boardLength = boardLength;
         components = new Component[boardWidth][boardLength];
-        Test33 test33 = new Test33(1, "tt");
     }
 
     public String getName() {

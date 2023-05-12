@@ -25,6 +25,7 @@ public class Main {
         boardJungle.addComponent(4,7, lightShield);
         boardJungle.addComponent(2,8, tree);
 
+
 //        janek.moveUp();
 
 
